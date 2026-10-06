@@ -1,3 +1,4 @@
+/* Denne CSS er til forsidens styling */
 
 html, body {
     margin: 0;
@@ -5,14 +6,17 @@ html, body {
     min-height: 100%;
 }
 
+/* Her laves vores navigationsbars position, den er refereret ved class, derfor ".".
+Her er posisitionen sat til sticky, som gør at den sidder fast i toppen når vi ruller videre ned på siden. */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Her har vi stylet vores overskrift ved primært at ændre skriftype, til "Impact". den skriftype bruger vi gennem hele siden */
 h1 {
-    position:relative;
+    position: relative;
     font-family: "Impact";
     text-align: center;
     background-color: #4C4541;
@@ -21,6 +25,7 @@ h1 {
     border-bottom: 0;
 }
 
+/* Her har vi valgt størrelse og placering af vores icon. Iconet er referet til med id, derfor "#" */
 #icon img {
     position: absolute;
     top: 15px;
@@ -28,6 +33,7 @@ h1 {
     width: 40px;
 }
 
+/* Herunder har vi designet vores links */
 .links { 
     background-color: #4C4541;
     margin: 0;
@@ -43,10 +49,13 @@ h1 {
     font-size: 18px;
 }
 
+/* Elementet "hover" gør at teksten får en linje under sig når man har sin curser over den.
+Dette har vi gjord så det er tydeligt at det er et link og fører dig til andre undersider ved klik */
 .links a:hover {
     text-decoration: underline;
 }
 
+/* Her har vi indsat og valgt størrelse på vores forside billede */
 #div1 {
     margin-top: 0;
   background-image: url(imgs/Kontrast\ ved\ byens\ vandkant.png);
@@ -55,7 +64,7 @@ h1 {
     padding: 70px 40px 400px 26px;
 }
 
-
+/* Herunder sker alt desing af vores kurv */
 .cart-wrapper {
     position: absolute;
     font-family: "Impact";
@@ -64,20 +73,21 @@ h1 {
 }
 
 #cart-button {
+    font-family: "Impact";
     font-size: 1rem;
     padding: 8px 14px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #FCF0DA;
     cursor: pointer;
-    top: 10px;
-    right: 20px;
 }
 
+/* Elementet "hidden" gør at kurven er gemt væk */
 .hidden {
     display: none;
 }
 
+/* Elementet "hover" gør her at kurven hopper frem når curseren kører over kurven */
 .cart-wrapper:hover #cart {
     display: block;
 }
@@ -122,6 +132,7 @@ h1 {
     border-bottom: 1px solid #eee;
 }
 
+/* Her har vi stylet vores skift midt på siden, og givet den en box om sig */
 h2 {
     font-family: "Impact";
     text-align: center;
@@ -133,7 +144,8 @@ h2 {
     margin: auto;
 }
 
-button {
+/* Dette element referere til vores knap på forsiden */
+#ShopNu {
     position: relative;
     top: 325px;
     font-family: "Impact";
@@ -143,6 +155,7 @@ button {
     background-color: #D9CFC7;
 }
 
+/* Herunder ligger alt design for det nederste information på siden */
 .information {
     font-family: "Impact";
     background-color: #4C4541;
@@ -156,15 +169,19 @@ button {
     position: absolute;
     bottom: 30px;
     left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
 }
 
 .kontakt h4 {
     color: #FCF0DA;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .kontakt a {
     color: #FCF0DA;
-    font-size: 20px;
+    font-size: 15px;
 }
 

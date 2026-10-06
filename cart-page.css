@@ -1,18 +1,56 @@
+/* Denne CSS er til undersidens styling */
+
 body {
     margin: 0;
     font-family: Impact;
 }
 
+/* Her laves vores navigationsbars position, den er refereret ved class, derfor ".".
+Her er posisitionen sat til sticky, som gør at den sidder fast i toppen når vi ruller videre ned på siden. */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-#subit {
-    
+/* Herunder er alt design for søgefeltet. Der refereret til søgefunktionen med class, derfor ".". */
+.search {
+    display: flex;
+    position: absolute;
+    right: 525px;
+    bottom: 5px;
+    margin: 0;
 }
 
+/* Herunder er alt design for søg knappen. */
+#submit {
+    padding: 12px 20px;
+    font-family: "Impact";
+    font-size: 16px;
+    color: #4C4541;
+    background-color: white;
+    border: 2px solid #4C4541;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+/* Elementet "hover" gør her at søg knappen skifter farve når cuersren rør knappen. */
+#submit:hover {
+    background-color: #4C4541;
+    color: white;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    font-family: "Impact";
+    border: 2px solid #4C4541;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+/* Her har vi stylet vores overskrift ved primært at ændre skriftype, til "Impact". den skriftype bruger vi gennem hele siden */
 h1 {
     position: relative;
     font-family: "Impact";
@@ -23,6 +61,7 @@ h1 {
     border-bottom: 0;
 }
 
+/* Her har vi valgt størrelse og placering af vores icon. Iconet er referet til med id, derfor "#" */
 #icon img {
     position: absolute;
     top: 15px;
@@ -30,6 +69,7 @@ h1 {
     width: 40px;
 }
 
+/* Herunder har vi designet vores links */
 .links { 
     background-color: #4C4541;
     margin: 0;
@@ -45,7 +85,7 @@ h1 {
     font-size: 18px;
 }
 
-
+/* Herunder sker alt desing af vores kurv */
 .cart-wrapper {
     position: absolute;
     font-family: "Impact";
@@ -63,10 +103,12 @@ h1 {
     cursor: pointer;
 }
 
+/* Elementet "hidden" gør at kurven er gemt væk */
 .hidden {
     display: none;
 }
 
+/* Elementet "hover" gør her at kurven hopper frem når curseren kører over kurven */
 .cart-wrapper:hover #cart {
     display: block;
 }
@@ -111,10 +153,12 @@ h1 {
     border-bottom: 1px solid #eee;
 }
 
+/* Elementet "hidden" gør at kurven er gemt væk */
 .hidden {
     display: none;
 }
 
+/* Herunder er der referet til vores grid, som vores produkter ligger inde i */
 .parent {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -135,12 +179,14 @@ h1 {
     background-color: white;
 }
 
+/* Denne referance er til billedene af varerene i vores grid, som ligger inde i et element med class="product" */
 .product img {
     width: 100%;
     height: 250px;
     object-fit: contain;
 }
 
+/* Herunder ligger alt design for det nederste information på siden */
 .information {
     font-family: "Impact";
     background-color: #4C4541;
@@ -154,14 +200,19 @@ h1 {
     position: absolute;
     bottom: 30px;
     left: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
 }
 
 .kontakt h4 {
     color: #FCF0DA;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .kontakt a {
     color: #FCF0DA;
-    font-size: 20px;
+    font-size: 15px;
 }

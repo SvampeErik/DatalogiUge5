@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--Titlen på hjemmesiden-->
     <title>Shabstore</title>
-    <!-- Forbinder HTML-siden med vores CSS-fil -->
 
     <link rel="icon" href="imgs/Skarmbillede 2026-10-06 kl. 08.28.53.png" type="image/png">
 
+<!-- Forbinder HTML-siden med vores CSS-fil -->
     <link rel="stylesheet" href="cart-page.css">
 </head>
 <body>
 
+<!-- Denne header danner vores navigationsbar og indeholder firmanavn -->
     <header class="navbar">
          <!-- Navn på vores webshop -->
     <h1 style = "color: #FCF0DA;"> SHAB STORE</h1>
-    
+
+<!-- Dette element danner kategorier i vores navigationsbar. De er levet med "href=#"", så man kan klikke på dem.
+ Vi har her valgt at "Forside", ved klik, skal fører os til vores forside. -->
 <nav class="links">
     <a href="#" onclick="window.location.href='index.html'">Forside</a>
     <a href="#">Alle varer</a>
@@ -26,53 +29,56 @@
     <a href="#">Kontakt</a>
 </nav>
 
+
+<!-- Her har vi lavet et ikon, som placeres oppe i hjørtet i vores navigationsbar -->
 <div id="icon"> 
     <img src="imgs/Skarmbillede 2026-10-06 kl. 08.28.53.png"/>
 </div>
 
-     <!-- Container til kurv-knappen og selve kurven -->
+<!-- Container til kurv-knappen og selve kurven -->
     <div class="cart-wrapper">
 
-         <!-- Kurv-knap.
-             cart-count ændres dynamisk med JavaScript -->
+<!-- Kurv-knap.
+    cart-count ændres dynamisk med JavaScript -->
         <button id="cart-button">🛒 Kurv <span id="cart-count">0</span></button>
 
-         <!-- Selve kurven. Klassen "hidden" gør, at den starter med at være skjult -->
+<!-- Selve kurven. Klassen "hidden" gør, at den starter med at være skjult -->
         <aside id="cart" class="hidden">
             <h2>Kurv</h2>
 
-             <!-- Her indsætter JavaScript varerne dynamisk -->
+<!-- Her indsætter JavaScript varerne dynamisk -->
             <ul id="cart-items"></ul>
-               <!-- Her indsætter JavaScript kurvens samlede pris -->
+<!-- Her indsætter JavaScript kurvens samlede pris -->
             <p>Total: <span id="cart-total">0</span> kr</p>
         </aside>
     </div>
-</header>
 
 <!-- SØGEFELT -->
 <div class="search">
 
-        <!-- Inputfelt hvor brugeren kan skrive sin søgning. JavaScript finder feltet gennem id="searchInput" -->
+<!-- Inputfelt hvor brugeren kan skrive sin søgning. JavaScript finder feltet gennem id="searchInput" -->
     <input type="text" id="searchInput" placeholder="Søg efter varer...">
-     <!-- Søgeknap -->
+<!-- Søgeknap -->
      <button id= "submit" type="submit">Søg</button>
 </div>
 
-<!-- PRODUKT-GRID -->
- <!-- Dette element starter tomt. JavaScript henter produkterne fra vores data og indsætter dem dynamisk her -->
-<main class="parent" id="product-grid"></main>
+</header>
 
+
+<!-- PRODUKT-GRID -->
+<!-- Dette element starter tomt. JavaScript henter produkterne fra vores data og indsætter dem dynamisk her -->
+<main class="parent" id="product-grid"></main>
 <!-- Dette element starter tomt. JavaScript henter produkterne fra vores data og indsætter dem dynamisk her -->
 
+<!-- Dette elemet er til vores nederste kontakts informationer, de er levet med href #, så man ville kunne klikke på dem (virker ikke da de er falske) -->
  <div class="information">
     <div class="kontakt">
         <h4>Kontakt os:</h4>
 
         <a href="#">Nummer: +45 12345678</a>
-        <br>
         <a href="#">Om Os</a>
-        <br>
         <a href="#">Returneringspolitik</a>
+
     </div>
 </div>
 
