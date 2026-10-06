@@ -16,7 +16,7 @@
     
 <nav class="links">
     <a href="#">Forside</a>
-    <a href="#">Alle varer</a>
+    <a href="#" onclick="window.location.href='cart-page.html'">Alle varer</a>
     <a href="#">Sko</a>
     <a href="#">Tøj</a>
     <a href="#">Kontakt</a>
@@ -26,16 +26,18 @@
     <img src="imgs/Skarmbillede 2026-10-06 kl. 08.28.53.png"/>
 </div>
 
-    <div class="cart-wrapper">
-        <buttonKurv id="cart-button">🛒 Kurv <span id="cart-count">0</span></buttonKurv>
+  <div class="cart-wrapper">
+    <button id="cart-button">
+        🛒 Kurv <span id="cart-count">0</span>
+    </button>
 
-        <aside id="cart" class="hidden">
-            <h3>Kurv</h3>
-            <ul id="cart-items"></ul>
-            <p>Total: <span id="cart-total">0</span> kr</p>
-        </aside>
-
-    </div>
+    <aside id="cart" class="hidden">
+        <h3>Kurv</h3>
+        <ul id="cart-items"></ul>
+        <li>Din kurv er tom</li>
+        <p>Total: <span id="cart-total">0</span> kr</p>
+    </aside>
+</div>
 
     </header>
 
@@ -45,7 +47,7 @@
 
             <h2>Vores udvalg!</h2>
             <br> 
-            <button onclick="window.location.href='cart-page.html'"> Shop her! </button>
+            <button id= "ShopNu" onclick="window.location.href='cart-page.html'"> Shop her! </button>
             </div>
         </section>
     </main>
@@ -65,5 +67,6 @@
 
     <script src="cart-page-data.js"></script>
      <script src="cart-page.js"></script>
+     <script src="kode.js"></script>
 </body>
 </html>

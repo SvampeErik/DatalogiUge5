@@ -7,12 +7,28 @@
    <!--Titlen på hjemmesiden-->
     <title>Shabstore</title>
     <!-- Forbinder HTML-siden med vores CSS-fil -->
+
+    <link rel="icon" href="imgs/Skarmbillede 2026-10-06 kl. 08.28.53.png" type="image/png">
+
     <link rel="stylesheet" href="cart-page.css">
 </head>
 <body>
-<header class="navbar">
-       <!-- Navn på vores webshop -->
-    <a href="#" class="logo">Shabstore</a>
+
+    <header class="navbar">
+         <!-- Navn på vores webshop -->
+    <h1 style = "color: #FCF0DA;"> SHAB STORE</h1>
+    
+<nav class="links">
+    <a href="#" onclick="window.location.href='index.html'">Forside</a>
+    <a href="#">Alle varer</a>
+    <a href="#">Sko</a>
+    <a href="#">Tøj</a>
+    <a href="#">Kontakt</a>
+</nav>
+
+<div id="icon"> 
+    <img src="imgs/Skarmbillede 2026-10-06 kl. 08.28.53.png"/>
+</div>
 
      <!-- Container til kurv-knappen og selve kurven -->
     <div class="cart-wrapper">
@@ -47,6 +63,19 @@
 <main class="parent" id="product-grid"></main>
 
 <!-- Dette element starter tomt. JavaScript henter produkterne fra vores data og indsætter dem dynamisk her -->
+
+ <div class="information">
+    <div class="kontakt">
+        <h4>Kontakt os:</h4>
+
+        <a href="#">Nummer: +45 12345678</a>
+        <br>
+        <a href="#">Om Os</a>
+        <br>
+        <a href="#">Returneringspolitik</a>
+    </div>
+</div>
+
 
 <!-- Indeholder vores statiske produktdata -->
 <script src="cart-page-data.js"></script>

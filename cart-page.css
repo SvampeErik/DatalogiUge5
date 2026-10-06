@@ -1,42 +1,72 @@
 body {
     margin: 0;
-    font-family: system-ui, sans-serif;
+    font-family: Impact;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1a7f73;
-    text-decoration: none;
-}
-
-.cart-wrapper {
     position: relative;
 }
 
+h1 {
+    position: relative;
+    font-family: "Impact";
+    text-align: center;
+    background-color: #4C4541;
+   margin: 0;
+    padding: 15px;
+    border-bottom: 0;
+}
+
+#icon img {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+}
+
+.links { 
+    background-color: #4C4541;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 5px solid #4C4541;
+}
+
+.links a {
+    color: #FCF0DA;
+    text-decoration: none;
+    font-family: "Impact";
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+
+.cart-wrapper {
+    position: absolute;
+    font-family: "Impact";
+    top: 10px;
+    right: 20px;
+}
+
 #cart-button {
+    font-family: "Impact";
     font-size: 1rem;
     padding: 8px 14px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: white;
+    background-color: #FCF0DA;
     cursor: pointer;
 }
 
+.hidden {
+    display: none;
+}
+
+.cart-wrapper:hover #cart {
+    display: block;
+}
+
 #cart-count {
-    background-color: #1a7f73;
+    background-color: black;
     color: white;
     border-radius: 999px;
     padding: 2px 8px;
@@ -56,6 +86,7 @@ body {
 }
 
 #cart h2 {
+    color: black;
     margin-top: 0;
 }
 
@@ -102,4 +133,29 @@ body {
     width: 100%;
     height: 250px;
     object-fit: contain;
+}
+
+.information {
+    font-family: "Impact";
+    background-color: #4C4541;
+    padding: 30px;
+    height: 500px;
+    position: relative;
+    font-size: 30px;
+}
+
+.kontakt {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.kontakt h4 {
+    color: #FCF0DA;
+    font-size: 30px;
+}
+
+.kontakt a {
+    color: #FCF0DA;
+    font-size: 20px;
 }
