@@ -1,0 +1,159 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.navbar {
+    position: relative;
+}
+
+h1 {
+    position: relative;
+    font-family: "Impact";
+    text-align: center;
+    background-color: #4C4541;
+   margin: 0;
+    padding: 15px;
+    border-bottom: 0;
+}
+
+#icon img {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+}
+
+.links { 
+    background-color: #4C4541;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 5px solid #4C4541;
+}
+
+.links a {
+    color: #FCF0DA;
+    text-decoration: none;
+    font-family: "Impact";
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+#div1 {
+    margin-top: 0;
+  background-image: url(imgs/Kontrast\ ved\ byens\ vandkant.png);
+  background-position: right top;    
+    background-repeat: no-repeat;
+    padding: 70px 40px 400px 26px;
+}
+
+
+.cart-wrapper {
+    position: absolute;
+    font-family: "Impact";
+    top: 10px;
+    right: 20px;
+}
+
+#cart-button {
+    font-size: 1rem;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #FCF0DA;
+    cursor: pointer;
+}
+
+#cart-count {
+    background-color: black;
+    color: white;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.85rem;
+}
+
+#cart {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 300px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#cart h2 {
+    color: black;
+    margin-top: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+
+h2 {
+    font-family: "Impact";
+    text-align: center;
+    position: relative;
+    top: 325px;
+    color:#FCF0DA;
+    border: solid #FCF0DA;
+    width: 300px; 
+    margin: auto;
+}
+
+button {
+    position: relative;
+    top: 325px;
+    font-family: "Impact";
+    display: block;
+    margin: auto;
+    padding: 8px 20px;
+    background-color: #D9CFC7;
+}
+
+.information {
+    font-family: "Impact";
+    background-color: #4C4541;
+    padding: 30px;
+    height: 500px;
+    position: relative;
+    font-size: 30px;
+}
+
+.kontakt {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.kontakt h4 {
+    color: #FCF0DA;
+    font-size: 30px;
+}
+
+.kontakt a {
+    color: #FCF0DA;
+    font-size: 20px;
+}
