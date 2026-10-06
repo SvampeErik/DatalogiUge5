@@ -1,10 +1,12 @@
 let cart = [];
 
-function renderProducts() {
+function renderProducts(productsToShow) {
   const grid = document.getElementById("product-grid");
+  grid.innerHTML = "";
 
-  for (const product of products) {
+  for (const product of productsToShow) {
     const card = document.createElement("div");
+    card.classList.add("product");
     card.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
@@ -112,8 +114,19 @@ function renderCart() {
   document.getElementById("cart-count").textContent = count;
 }
 
-renderProducts();
+renderProducts(products);
 renderCart();
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function () {
+    const searchText = searchInput.value.toLowerCase();
+
+    const filteredProducts = products.filter(function (product) {
+        return product.name.toLowerCase().includes(searchText);
+    });
+
+    renderProducts(filteredProducts);
+});
 
 document.getElementById("cart-button").addEventListener("click", () => {
   document.getElementById("cart").classList.toggle("hidden");
