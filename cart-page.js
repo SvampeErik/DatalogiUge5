@@ -37,6 +37,11 @@ function addToCart(product) {
   renderCart();
 }
 
+function minusFromCart(id){
+  cart.pull({id: product.id, name: product.name, price: product.price,quantity:1,});
+  renderCart();
+}
+
 function removeFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
   renderCart();
