@@ -37,10 +37,16 @@ function addToCart(product) {
   renderCart();
 }
 
-function minusFromCart(id){
-  cart.pull({id: product.id, name: product.name, price: product.price,quantity:1,});
-  renderCart();
+function minusFromCart(id){ 
+  const existing = cart.find((item) => item.id === product.id);     //
+
+  if (existing){quantity--}                                         //Trækker en fra kurven.
+    if (existing.quantity <= 0) {
+      cart = cart.filter((item) => item.id !== id);                 //Hvis mængden bliver 0, så fjerner den produktet helt fra kurven
+    }
+
 }
+
 
 function removeFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
@@ -65,6 +71,11 @@ function renderCart() {
     removeButton.textContent = "Fjern";
     removeButton.addEventListener("click", () => removeFromCart(item.id));
 
+    const minusButton = document.createElement("button");
+    minusButton.textContent = "−";
+    minusButton.addEventListener("click", () => minusFromCart(item.id));
+
+    li.appendChild(minusButton);
     li.appendChild(removeButton);
     list.appendChild(li);
 
