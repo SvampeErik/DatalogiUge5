@@ -85,3 +85,21 @@ body {
     padding: 24px;
 }
 
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product {
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
