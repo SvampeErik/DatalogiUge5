@@ -37,16 +37,29 @@ function addToCart(product) {
   renderCart();
 }
 
-function minusFromCart(id){ 
-  const existing = cart.find((item) => item.id === product.id);     //
-
-  if (existing){quantity--}                                         //Trækker en fra kurven.
-    if (existing.quantity <= 0) {
-      cart = cart.filter((item) => item.id !== id);                 //Hvis mængden bliver 0, så fjerner den produktet helt fra kurven
-    }
-
+function plusToCart(id){
+  const existing = cart.find((item) => item.id === product.id);
+  existing.quantity++;
+  renderCart();
 }
 
+function minusFromCart(id) {
+    const existing = cart.find(function (item) {
+        return item.id === id;
+    });
+
+    if (existing) {
+        existing.quantity--;
+
+        if (existing.quantity <= 0) {
+            cart = cart.filter(function (item) {
+                return item.id !== id;
+            });
+        }
+    }
+
+    renderCart();
+}
 
 function removeFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
@@ -66,15 +79,27 @@ function renderCart() {
   for (const item of cart) {
     const li = document.createElement("li");
     li.textContent = `${item.name} × ${item.quantity} – ${item.price * item.quantity} kr`;
-
+      //Fjern-knap
     const removeButton = document.createElement("button");
     removeButton.textContent = "Fjern";
     removeButton.addEventListener("click", () => removeFromCart(item.id));
 
+   // Minus-knap
     const minusButton = document.createElement("button");
     minusButton.textContent = "−";
-    minusButton.addEventListener("click", () => minusFromCart(item.id));
 
+    minusButton.addEventListener("click", function () {
+    minusFromCart(item.id);      });
+
+        // Plus-knap
+    const plusButton = document.createElement("button");
+    plusButton.textContent = "+"; 
+    plusButton.addEventListener("click", function () {
+    addToCart(item);
+    });
+
+
+    li.appendChild(plusButton);
     li.appendChild(minusButton);
     li.appendChild(removeButton);
     list.appendChild(li);
